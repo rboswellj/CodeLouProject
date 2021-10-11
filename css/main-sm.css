@@ -17,31 +17,31 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
     color: rgb(224, 99, 77);
+    font-weight: 700;
 }
 
 .centerWrap {
     margin: 0;
     padding: 0;
     flex-direction: row;
-    flex-grow: initial;
     flex-basis: 80%;
     max-width: 1024px;
 }
 
 header {
     margin: 0;
+    padding: 0 0 .5rem 0;
     min-width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
     background-color: rgb(54, 43, 102);
 }
 
 .logoBar {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 100%;
-    justify-content: flex-start;
+    display: inline;
+    margin: 0;
 }
 
 .logoBar h1 {
@@ -51,13 +51,13 @@ header {
 
 .logo {
     font-size: 2rem;
-    justify-content: center;
-    align-self: center;
+    font-weight: 700;
+    display: inline;
+    height: 100%;
     padding: 0 1rem 0 1rem;
-    margin: 0;
+    margin: 0 0 .2rem 0;
     background-color: brown;
 }
-
 
 /* navigation rules */
 
@@ -75,7 +75,6 @@ nav {
     margin: 0;
     z-index: 1;    
     width: 80%;
-    background-color: rgb(54, 43, 102);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.05);
 }
 
@@ -102,22 +101,23 @@ nav ul.open li{
 }
 
 nav li {
-    box-shadow: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    transition: background-color 1s ease-out, box-shadow 1s ease-out;
+}
+
+nav li:hover {
+    transition: background-color 1s ease-out, box-shadow 1s ease-out;
+    background-color: rgba(216, 205, 205, 0.2);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 nav li.active {
     background-color: rgba(0,0,0,0.5);
 }
 
-nav li:hover {
-    transition: background-color 2s ease-out;
-    background-color: rgba(216, 205, 205, 0.2);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
-
 nav a {
     color: aliceblue;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -183,7 +183,8 @@ footer {
 
 .footItem {
     padding: 0rem 2rem;
-    margin: .5rem 0 .5rem 0;
+    margin: .5rem .25rem .5rem .25rem;
+    flex: 1 1 auto;
     background-color: darkslategray;
 }
 
