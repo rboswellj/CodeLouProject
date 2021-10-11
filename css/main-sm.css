@@ -49,7 +49,9 @@ header {
     color: aliceblue;
 }
 
-.logo {
+.logo {display: none;}
+
+#logo-sm {
     font-size: 2rem;
     font-weight: 700;
     display: inline;

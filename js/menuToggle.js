@@ -3,4 +3,6 @@ function toggleMenu() {
     document.getElementById("header").classList.toggle("open");
 }
 let x = document.getElementById('hamburgerBtn');
-x.onclick = toggleMenu; 
+let y = document.getElementById('logo-sm');
+x.onclick = toggleMenu;
+y.onclick = toggleMenu; 

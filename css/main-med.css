@@ -3,9 +3,16 @@
         padding: 0;
     }    
     .logo {
+        display: inline;
         font-weight: 700;
         font-size: 1.8rem;
         padding: 0 .8rem 1px .8rem;
+        height: 100%;
+        margin: 0 0 .2rem 0;
+        background-color: brown;
+    }
+    #logo-sm {
+        display: none;
     }
     nav button {display: none;}
     nav {
