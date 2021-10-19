@@ -2,7 +2,11 @@ function toggleMenu() {
     document.getElementById("menu").classList.toggle("open");
     document.getElementById("header").classList.toggle("open");
 }
-let x = document.getElementById('hamburgerBtn');
-let y = document.getElementById('logo-sm');
-x.onclick = toggleMenu;
-y.onclick = toggleMenu; 
+let hamburger = document.getElementById('hamburgerBtn');
+let logo = document.getElementById('logoSm');
+let logoText = document.getElementById('logoHeading');
+hamburger.onclick = toggleMenu;
+logo.onclick = toggleMenu; 
+logoText.onclick = toggleMenu;
+
+

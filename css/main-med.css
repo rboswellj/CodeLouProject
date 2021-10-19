@@ -1,8 +1,4 @@
-@media only screen and (min-width: 620px) {
-    nav {
-        padding: 0;
-        height: 38px;
-    }    
+@media only screen and (min-width: 620px) { 
 
     .logo {
         display: inline;
@@ -11,18 +7,37 @@
         padding: .2rem .3rem .1rem .3rem;
         height: 65px;
         margin: 0 0 0 0;
+        z-index: 1;
     }
 
-    #logo-sm {
+    .logoSm {
         display: none;
+    }
+
+    #logoHeading {
+        display: none;
+    }
+
+    #logoNoLink {
+        display: inline;
+        font-size: 1.2rem;
+        justify-self: center;
+        z-index: 1;
+        position: relative;
+        bottom: 5px;
     }
          
     nav button {display: none;}
 
     nav {
         display: flex;
-        flex-direction: row;
-        background: linear-gradient(rgba(54, 43, 102,1), rgb(75, 64, 121), rgba(54, 43, 102,1));
+        flex-flow: row wrap;
+        justify-content: center;
+        flex-basis: 80%;
+        height: 38px;
+        max-width: 1024px;
+        background: none;
+        background-color: rgba(54, 43, 102,1);
         padding: 0 0 .1rem 0;
         margin:0;
     }
@@ -35,7 +50,9 @@
     nav ul {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
         align-items: center;
+        background-color: rgba(54, 43, 102,1);
     }
 
     nav li {
@@ -50,6 +67,7 @@
         justify-content: space-around;
         color: white;
     }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -64,11 +82,22 @@
 
     .logoBar h1 {
         display: inline;
+        font-size: 2rem;
     }
 
     nav {
         height: auto;
         flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: flex;
+        position: initial;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: none;
+        bottom: 0;
     }
 
     nav li {
