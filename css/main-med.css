@@ -4,10 +4,15 @@
         display: inline;
         font-weight: 700;
         font-size: 1.8rem;
+        cursor: default;
         padding: .2rem .3rem .1rem .3rem;
         height: 65px;
-        margin: 0 0 0 0;
+        margin: 0;
         z-index: 1;
+    }
+
+    .logoBar {
+        max-height: 34px;
     }
 
     .logoSm {
@@ -22,11 +27,11 @@
         display: inline;
         font-size: 1.2rem;
         justify-self: center;
-        z-index: 1;
-        position: relative;
-        bottom: 5px;
+        z-index: 2;
     }
          
+    #hamburgerBtn {display: none;}
+
     nav button {display: none;}
 
     nav {
@@ -35,9 +40,9 @@
         justify-content: center;
         flex-basis: 80%;
         height: 38px;
+        align-self: flex-end;
         max-width: 1024px;
         background: none;
-        background-color: rgba(54, 43, 102,1);
         padding: 0 0 .1rem 0;
         margin:0;
     }
@@ -50,9 +55,9 @@
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
-        background-color: rgba(54, 43, 102,1);
+        background-color: rgb(97, 89, 133);
     }
 
     nav li {
@@ -72,22 +77,32 @@
 
 @media only screen and (min-width: 1024px) {
     .logoBar {
-        display: block;
+        display: flex;
         min-width: 100%;
-        padding: 1rem .5rem 1rem .5rem;
+        padding: .1rem .5rem .01rem .5rem;
         background-color: brown;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
-
     }
 
-    .logoBar h1 {
+    .logo {
+        height: 90px;
+        padding: .3 .1rem 1rem .1rem;
+    }
+
+    #logoNoLink {
         display: inline;
-        font-size: 2rem;
+        align-self: center;
+        height: 40px;
+        padding: 0;
+        font-size: 3rem;
     }
+
 
     nav {
         height: auto;
         flex-wrap: wrap;
+        align-self: flex-start;
+        padding-left: 20px;
+        margin: 0;
     }
 
     nav ul {
