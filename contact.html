@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main-sm.css" />
+    <link rel="stylesheet" href="css/main-med.css" />
+    <link rel="stylesheet" href="css/form-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+        <div class="headCenterWrap">
+          <div class="headWrap">     
+            <div class="logoBar">
+              <a href="#" class="logo expander" id="logo"><img src="img/cherrybomb.svg" class="logo expander"></a>
+              <img src="img/cherrybomb.svg" class="logoSm expander" id="logoSm">
+              <a id="logoHeading"><h1>Pixel Exploder</h1></a>
+              <h1 id="logoNoLink">Pixel Exploder</h1>
+              <button id="hamburgerBtn" class="expander">&#9776;</button>
+            </div>
+            </div>
+            <nav>
+            <ul id="menu">
+              <li><a href="/index.html" class="item">Home</a></li>
+              <li><a href="#" class="item">About</a></li>
+              <li><a href="#" class="item">Work</a></li>
+              <li><a href="#" class="item">Play</a></li>
+              <li><a href="#" class="item active">Contact</a></li>
+              <li><a href="#" class="item">GitHub</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+      <div class="centerWrap">
+          <div id="formWrap">
+            <form id="contactForm" name="contactForm">
+                <h2>Contact Pixel Exploder</h2>
+                <label name="name">Name:<input type="text" name="name" id="nameInput" class="formItem" placeholder="EX: John Smith"></label>
+                <label name="email">Email:<input type="text" name="email" id="emailInput" class="formItem" placeholder="EX: Email@example.com"></label>
+                <label name="phone">Phone Number (Optional):<input type="text" name="phone" class="formItem" id="phoneInput" placeholder="EX: 555-555-5555"></label>
+                <label name="contactMsg">Message:<textarea name="contactMsg" form="contactForm" id="messageInput" class="formItem" rows="4" cols="50" placeholder="Enter Your Message Here"></textarea></label>
+                <input type="submit" id="submit">
+            </form>
+            
+        </div>
+    </div>
+    </main>
+    <footer>
+      <!-- <div class="footWrap centerWrap">
+        <div class="footItem">
+            <div class="footText">
+                <h3>Some</h3>
+                <p>These are some footer items.</p>
+            </div>
+        </div>
+        <div class="footItem">
+            <div class="footText">
+                <h3>Footer</h3>
+                <p>These are some footer items.</p>
+            </div>
+        </div>
+        <div class="footItem">
+            <div class="footText">
+                <h3>Stuff</h3>
+                <p>These are some footer items.</p>
+            </div>
+        </div>
+      </div> -->
+    </footer>
+    <script src="js/menuToggle.js"></script>
+  </body>
+</html>
