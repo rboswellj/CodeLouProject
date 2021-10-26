@@ -36,13 +36,21 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1024px;
 }
 
+.flexContRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexContCol {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header Rules */
 
 .headCenterWrap {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     background-color: rgba(54, 43, 102,1);
     flex-basis: 80%;
@@ -50,10 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headWrap {
-    display: flex;
-    flex-flow: column wrap;
-    background-color: rgba(54, 43, 102,1);
-    flex-basis: 80%;
     max-width: 1024px;
 }
 
@@ -61,8 +65,6 @@ header {
     margin: 0;
     padding: 0;
     min-width: 100vw;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     background-color: grey;
 }
@@ -75,20 +77,13 @@ header {
     on larger formats, as the nav switches formats
 */
 
-.logoBar {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    flex-basis: 100%;
-    margin: 0;
-}
 
 .logoBar h1 {
     display: inline;
     order: 3;
-    font-size: 1.2rem;
-    padding: 0 0 0 .4rem;
+    font-size: 1.8rem;
+    padding: 0 0 0 .2rem;
+    bottom: 0px;
     color: aliceblue;
 }
 
@@ -98,21 +93,17 @@ header {
 /* Logo and nav expander for mobile */
 .logoSm {
     display: inline;
-    position: relative;
     cursor: pointer;
-    z-index: 1;
     background: none;
-    height: 44px;
-    top: 2px;
-    padding: .2rem .2rem .4rem .4rem;
-    margin: 0;
+    order: 2;
+    height: 48px;
+    padding: .1rem .2rem .2rem .4rem;
+    transform: rotate(10deg);
 }
 
 /* Logo text for small screen */
 #logoHeading {
     order: 3;
-    justify-self: flex-start;
-    align-self: flex-start;
     padding-top: 12px;
     cursor: pointer;
 }
@@ -125,11 +116,11 @@ header {
     align-self: flex-start;
     background: none;
     border:none;
-    color: rgb(166, 157, 201);
-    font-size: 1.5rem;
+    color: aliceblue;
+    font-size: 2rem;
     font-weight: 700;
     cursor: pointer;
-    padding: .5rem 0 0 0;
+    padding: .45rem 0 0 .3rem;
 }
 
 /* navigation rules */
@@ -138,7 +129,7 @@ header {
 
 nav {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     flex-basis: 80%;
     max-width: 1024px;
@@ -150,14 +141,18 @@ nav {
 }
 
 nav ul {
-    
     list-style-type: none;
     margin:0;
     padding: 0;
     width: 100%;
-    margin: 0;
-    display: none;
+    padding: .2rem 1rem 0 1rem;
+    /* display: none; */
+    overflow-y: hidden;
+    height: 0px;
+    transition: height .8s ease-out;
 }
+
+
 
 /* 
     Nav rules for expanding menu
@@ -169,26 +164,37 @@ nav ul.open {
     background-color: rgba(54, 43, 102,1);
     display: flex;
     flex-direction: column;
+    height: 230px;
     padding: .2rem 1rem .5rem 1rem;
+    transition: height .8s ease-out;
+    display: block;
 }
 
 nav ul.open li{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: .5rem;
-    padding: .5rem;
-    margin: .2rem 0 .2rem 0;
+    padding: .3rem;
+    margin: 0 0 .2rem 0;
     justify-self: center;
 }
 
+/* Box shadow and background color
+    Transition animation to fade on mouse hover */
+
 nav li {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
-    transition: background-color 1s ease-out, box-shadow 1s ease-out;
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
+    padding: .3rem;
+    margin: 0 0 .2rem 0;
+    justify-self: center;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 1s ease-out, box-shadow .5s ease-out;
 }
 
 nav li:hover {
-    transition: background-color 1s ease-out, box-shadow 1s ease-out;
+    transition: background-color 1s ease-out, box-shadow .5 ease-out;
     background-color: rgba(216, 205, 205, 0.2);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 nav > ul > li.active {

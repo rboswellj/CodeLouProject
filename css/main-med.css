@@ -57,6 +57,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        height: auto;
 
     }
 
@@ -125,6 +126,5 @@
     .articleImg {
         max-width: 700px;
     }
-
 
 }
