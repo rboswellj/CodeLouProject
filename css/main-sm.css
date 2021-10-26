@@ -11,6 +11,7 @@ body, html {
     background-color: rgb(31, 39, 68);
     min-height: 100vh;
     display: flex;
+    overflow-x: hidden;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -152,8 +153,6 @@ nav ul {
     transition: height .8s ease-out;
 }
 
-
-
 /* 
     Nav rules for expanding menu
     .open indicates the appearance
@@ -170,7 +169,7 @@ nav ul.open {
     display: block;
 }
 
-nav ul.open li{
+nav ul.open a{
     font-size: 1.3rem;
     padding-bottom: .5rem;
     padding: .3rem;
@@ -184,7 +183,6 @@ nav ul.open li{
 nav li {
     font-size: 1.3rem;
     padding-bottom: .5rem;
-    padding: .3rem;
     margin: 0 0 .2rem 0;
     justify-self: center;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
@@ -204,6 +202,7 @@ nav > ul > li.active {
 nav a {
     color: aliceblue;
     font-weight: 700;
+    padding: .5rem;
     text-decoration: none;
 }
 
@@ -253,9 +252,9 @@ article > div > img {
 
 .footWrap {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    background-color: white;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: rgb(250, 251, 252);;
 }
 
 footer {
@@ -263,12 +262,12 @@ footer {
     margin: 0;
     display: flex;
     justify-content: center;
-    min-width: 100vw;
+    width: 100%;
 }
 
 .footItem {
     padding: 0rem 2rem;
-    margin: .5rem .25rem .5rem .25rem;
+    margin: .5rem .05rem .5rem .05rem;
     flex: 1 1 auto;
     background-color: rgb(250, 251, 252);
     color: black;
@@ -285,4 +284,13 @@ footer {
 
 .footText p {
     margin: .3em .3em .3em 0;
+}
+
+#outerFoot {
+    flex-basis: 80%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(250, 251, 252);;
 }

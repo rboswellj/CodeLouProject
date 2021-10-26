@@ -26,15 +26,18 @@ form.h1, form.h2 {
     width: 100px;
     padding: .5rem;
     margin-top: .5rem;
-    background-color: green;
+    cursor: pointer;
+    background-color: rgb(104, 182, 104);
     color: white;
     font-weight: 700;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: background-color .5s ease-out;
 }
 
-#submit.button:hover {
-    background-color: rgb(9, 90, 9);
+#submit:hover {
+    background-color: rgb(52, 114, 52);
+    transition: background-color .5s ease-out;
 }
 
 label {

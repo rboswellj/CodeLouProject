@@ -1,4 +1,4 @@
-@media only screen and (min-width: 620px) { 
+@media only screen and (min-width: 680px) { 
 
     .logo {
         display: inline;
@@ -76,7 +76,7 @@
 
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 999px) {
     .logoBar {
         display: flex;
         min-width: 100%;
@@ -124,6 +124,10 @@
     }
 
     .articleImg {
+        max-width: 700px;
+    }
+
+    .footWrap {
         max-width: 700px;
     }
 
