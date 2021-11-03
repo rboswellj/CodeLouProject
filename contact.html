@@ -44,13 +44,36 @@
     <main>
       <div class="centerWrap" id="outerFoot">
           <div id="formWrap">
-            <form id="contactForm" name="contactForm">
+            <form id="contactForm" name="contactForm" onsubmit="return validateForm()" method="get" enctype="application/x-www-form-urlencoded">
                 <h2>Contact Pixel Exploder</h2>
-                <label name="name">Name:<input type="text" name="name" id="nameInput" class="formItem" placeholder="EX: John Smith"></label>
-                <label name="email">Email:<input type="text" name="email" id="emailInput" class="formItem" placeholder="EX: Email@example.com"></label>
-                <label name="phone">Subject (Optional):<input type="text" name="subject" class="formItem" id="subjectInput" placeholder="EX: Quote Request"></label>
-                <label name="contactMsg">Message:<textarea name="contactMsg" form="contactForm" id="messageInput" class="formItem" rows="4" cols="50" placeholder="Enter Your Message Here"></textarea></label>
-                <input type="submit" id="submit">
+                <section id="nameSpan" class="">
+                  <label name="name" id="name">
+                    <div>Enter Name:</div>
+                    <input type="text" name="name" id="nameInput" class="formItem" placeholder="EX: John Smith" autocomplete="name">
+                    <span class="errMsg">Please enter your name</span>
+                  </label>
+                </section>
+              <section id="emailSpan" class="">
+                <label name="email">
+                  <div>Enter Email:</div>
+                  <input type="text" name="email" id="emailInput" class="formItem" placeholder="EX: Email@example.com" autocomplete="email">
+                  <span class="errMsg">Please enter a valid email</span>
+                </label>
+              </section>
+              <section id="subjectSpan" class="optional">
+                <label name="subject">
+                  <div>Subject (Optional):</div>
+                  <input type="text" name="subject" class="formItem" id="subjectInput" placeholder="EX: Quote Request" default="Pixel Exploder Contact Form">
+                </label>
+              </section>
+              <section id ="messageSpan" class ="">
+                <label name="contactMsg">
+                <div>Enter Message:</div>
+                  <textarea name="contactMsg" form="contactForm" id="messageInput" class="formItem" rows="4" cols="50" placeholder="Enter Your Message Here"></textarea>
+                  <span class="errMsg">Please enter a message</span>
+                </label>
+              </section>
+                <input type="submit" id="submit" value="send">
             </form>         
         </div>
     </div>
@@ -58,5 +81,6 @@
     <footer>
     </footer>
     <script src="js/menuToggle.js"></script>
+    <script src="js/formValidate.js"></script>
   </body>
 </html>
