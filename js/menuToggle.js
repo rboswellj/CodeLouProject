@@ -5,7 +5,10 @@ function toggleMenu() {
 let hamburger = document.getElementById('hamburgerBtn');
 let logo = document.getElementById('logoSm');
 let logoText = document.getElementById('logoHeading');
+
 hamburger.addEventListener("click", toggleMenu);
-logo.onclick = toggleMenu; 
-logoText.onclick = toggleMenu;
+logo.addEventListener("click", toggleMenu);
+logoText.addEventListener("click", toggleMenu);
+
+
 

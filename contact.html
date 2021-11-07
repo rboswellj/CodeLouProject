@@ -32,11 +32,11 @@
           <nav>
           <ul id="menu">
             <li><a href="index.html" class="item">Home</a></li>
-            <li><a href="#" class="item">About</a></li>
-            <li><a href="#" class="item">Work</a></li>
-            <li><a href="#" class="item">Play</a></li>
+            <li><a href="/about.html" class="item">About</a></li>
+            <li><a href="/work.html" class="item">Work</a></li>
+            <li><a href="/play.html" class="item">Play</a></li>
             <li><a href="#" class="item active">Contact</a></li>
-            <li><a href="#" class="item">GitHub</a></li>
+            <li><a href="https://github.com/rboswellj" class="item" target="_blank">GitHub</a></li>
           </ul>
         </nav>
       </div>
@@ -44,7 +44,7 @@
     <main>
       <div class="centerWrap" id="outerFoot">
           <div id="formWrap">
-            <form id="contactForm" name="contactForm" onsubmit="return validateForm()" method="get" enctype="application/x-www-form-urlencoded">
+            <form id="contactForm" name="contactForm" onsubmit="return validateForm();" action="formConfirm.html">
                 <h2>Contact Pixel Exploder</h2>
                 <section id="nameSpan" class="">
                   <label name="name" id="name">
@@ -73,7 +73,7 @@
                   <span class="errMsg">Please enter a message</span>
                 </label>
               </section>
-                <input type="submit" id="submit" value="send">
+                <button id="submit">Submit</button>
             </form>         
         </div>
     </div>

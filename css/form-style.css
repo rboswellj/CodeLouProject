@@ -21,7 +21,7 @@ form.h1, form.h2 {
     margin: 0;
 }
 
-#submit {
+button {
     display: inline;
     width: 100px;
     padding: .5rem;
@@ -35,7 +35,7 @@ form.h1, form.h2 {
     transition: background-color .5s ease-out;
 }
 
-#submit:hover {
+button:hover {
     background-color: rgb(52, 114, 52);
     transition: background-color .5s ease-out;
 }
@@ -86,6 +86,18 @@ section span {display:none;}
 
 section.error span {
     display: block;
+}
+
+#submitted {
+    width: 80%;
+}
+
+h5 {
+    margin: .5rem 0 .5rem 0;
+}
+
+#messageDiv {
+    margin: 0 0 1rem 0;
 }
 
 @media only screen and (min-width: 620px) { 
