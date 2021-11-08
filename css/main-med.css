@@ -12,7 +12,7 @@
     }
 
     .logoBar {
-        max-height: 34px;
+        max-height: 40px;
     }
 
     .logoSm {
@@ -43,8 +43,6 @@
         align-self: flex-end;
         max-width: 1024px;
         background: none;
-        padding: 0 .5rem .3rem 0;
-        margin:0;
     }
 
     header {
@@ -57,12 +55,12 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        padding: .5rem 0;
         height: auto;
 
     }
 
     nav li {
-        padding: .5rem .5rem .5rem .5rem;
         font-size: 1rem;
         font-weight: 700;
     }
@@ -70,8 +68,13 @@
     .footWrap {
         display: flex;
         flex-flow: row wrap;
+        max-width: 72%;
         justify-content: space-around;
         color: white;
+    }
+
+    .item {
+        padding: .5rem 1rem;
     }
 
 }
@@ -93,7 +96,6 @@
     #logoNoLink {
         display: inline;
         align-self: center;
-        /* height: 40px; */
         padding: 0;
         font-size: 3rem;
     }
@@ -103,7 +105,7 @@
         height: auto;
         flex-wrap: wrap;
         align-self: flex-start;
-        padding-left: 20px;
+        padding-left: 0;
         margin: 0;
     }
 
@@ -112,7 +114,6 @@
         position: initial;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
         background-color: none;
         bottom: 0;
     }
@@ -120,7 +121,7 @@
     nav li {
         font-size: 1rem;
         font-weight: 700;
-        padding: .75rem 1rem .75rem 1rem;
+        padding: 0;
     }
 
     .articleImg {
@@ -128,7 +129,10 @@
     }
 
     .footWrap {
-        max-width: 700px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 750px;
     }
 
 }
