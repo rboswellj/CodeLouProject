@@ -1,8 +1,7 @@
 function validateForm() {
+  var CFORM = document.forms.contactForm;
 
-  const CFORM = document.forms.contactForm;
-
-  let values = {
+  var values = {
     name: CFORM.name.value,
     email: CFORM.email.value,
     subject: CFORM.subject.value,
@@ -36,10 +35,10 @@ function validateForm() {
 
   console.log(values);
 
-  sessionStorage.setItem("name", values.name);
-  sessionStorage.setItem("email", values.email);
-  sessionStorage.setItem("subject", values.subject);
-  sessionStorage.setItem("message", values.message);
+  for (const [key, value] of Object.entries(values)) {
+    sessionStorage.setItem(key, value);
+  }
+
 
   console.log(sessionStorage);
 
@@ -66,9 +65,10 @@ function confirmForm(){
     subject: document.getElementById("subjectDiv"),
     message: document.getElementById("messageDiv")
   }
-  fields.name.innerHTML= "<h5>Name:</h5>" + vals.name;
-  fields.email.innerHTML= "<h5>email:</h5>" + vals.email;
-  fields.subject.innerHTML= "<h5>subject:</h5>" + vals.subject;
-  fields.message.innerHTML= "<h5>message:</h5>" + vals.message;
+
+  for (const [key, value] of Object.entries(vals)) {
+    fields[key].innerHTML = `<h5>${key}: </h5>` +vals[key];
+  }
+
 }
 
