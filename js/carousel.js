@@ -5,9 +5,9 @@ function changeImage() {
     let img = document.getElementsById('slide1');
 
     const images = [
-        "/img/carousel/image1.jpg",
-        "/img/carousel/image2.jpg",
-        "/img/carousel/image3.jpg"
+        "img/carousel/image1.jpg",
+        "img/carousel/image2.jpg",
+        "img/carousel/image3.jpg"
     ]
 
         if (count === undefined || count === images.length) {
