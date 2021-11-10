@@ -1,0 +1,31 @@
+
+
+  .carouselImg {
+    object-fit: cover;
+    width: 100%;
+    height: 25%;
+    max-height: 250px;
+    transition: width, 5s, ease-out, 
+}
+
+.carousel {
+    width: 100%;
+    height: 25%;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
