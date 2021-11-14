@@ -9,6 +9,8 @@ function validateForm() {
     status: true
   };
 
+  /* Validates entries in form */
+
   if (values.name === null || values.name === "") {
     values.status = false;
     document.getElementById("nameSpan").className = "error";
@@ -33,18 +35,18 @@ function validateForm() {
     document.getElementById("messageSpan").className = "";
   }
 
-  console.log(values);
+  // console.log(values);
 
   for (const [key, value] of Object.entries(values)) {
     sessionStorage.setItem(key, value);
   }
 
 
-  console.log(sessionStorage);
+  // console.log(sessionStorage);
 
-  if(values.status === true) {
-      document.getElementById("submit").addEventListener("click", confirmForm(vals));
-  }
+  // if(values.status === true) {
+  //     document.getElementById("submit").addEventListener("click", confirmForm(vals));
+  // }
 
   return values.status;
 } //end of validateForm()
@@ -66,6 +68,7 @@ function confirmForm(){
     message: document.getElementById("messageDiv")
   }
 
+  /* Populates the items on the confirm page */
   for (const [key, value] of Object.entries(vals)) {
     fields[key].innerHTML = `<h5>${key}: </h5>` +vals[key];
   }
