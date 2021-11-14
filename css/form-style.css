@@ -11,8 +11,7 @@ form {
     flex-flow: column;
     justify-content: center;
     align-self: center;
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
     padding: 0 2rem 0 2rem;
 }
 
@@ -104,6 +103,8 @@ h5 {
     form {
         align-self: flex-start;
         justify-self: flex-start;
+        width: 80%;
+        max-width: 600px;
     }
 
     .item {

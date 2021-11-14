@@ -80,7 +80,9 @@ header {
 */
 
 .logoBar {
-    padding: 0 0 .3rem .75rem;
+    padding: 0 0 .3rem .25rem;
+    align-self: center;
+    justify-self: center;
 }
 
 .logoBar h1 {
@@ -102,7 +104,7 @@ header {
     background: none;
     order: 2;
     height: 48px;
-    padding: .1rem .2rem .2rem .4rem;
+    padding: .1rem .2rem .2rem .3rem;
     transform: rotate(10deg);
 }
 
@@ -124,8 +126,9 @@ header {
     color: aliceblue;
     font-size: 2rem;
     font-weight: 700;
+    width: 25px;
     cursor: pointer;
-    padding: .45rem 0 0 .3rem;
+    padding: .45rem 0 0 .1rem;
 }
 
 /* navigation rules */
